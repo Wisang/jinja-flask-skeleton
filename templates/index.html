@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask and Jinja</title>
+</head>
+<body>
+<div>
+    {% for post in all_posts %}
+        <a href="{{ url_for('get_posts', page=post.id) }}">See post {{post.id}}</a>
+    {% endfor %}
+</div>
+</html>
